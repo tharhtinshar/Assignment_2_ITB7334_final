@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication2.Models
@@ -64,6 +65,8 @@ namespace WebApplication2.Models
 
     public class RegisterViewModel
     {
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -79,6 +82,8 @@ namespace WebApplication2.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+      
     }
 
     public class ResetPasswordViewModel
